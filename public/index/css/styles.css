@@ -1,0 +1,291 @@
+@charset "UTF-8";
+
+@keyframes blinker {
+    50% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes slideFromTop {
+    0% {
+        top: -50vh;
+    }
+
+    100% {
+        top: 100px;
+    }
+}
+
+@keyframes darken {
+    0% {
+        background: 0;
+    }
+
+    100% {
+        background: rgba(0, 0, 0, 0.7);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: rgb(157, 114, 184);
+    text-decoration: none;
+    z-index: -5;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.containerFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-image: url("../i/Footer1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #9aaab6;
+}
+
+
+
+.containerMain {
+    display: flex;
+    margin: auto;
+    border: #C76F00 ridge 4px;
+    border-width: 10px;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+
+.containerHeader {
+    color: #000000;
+    margin: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    margin-left: 50px;
+}
+
+.banner-header {
+    position: relative;
+    width: 150px;
+    margin-right: 10px;
+}
+
+.panel {
+    width: 200px;
+}
+
+.table {
+    display: flex;
+    font-size: 14px;
+    color: #848484;
+    margin-left: 80px;
+}
+
+.header_table {
+    display: flex;
+    gap: 20px;
+
+}
+
+.name_transfer {
+    text-align: center;
+}
+
+
+.info {
+    display: flex;
+    gap: 10px;
+}
+
+
+.item_info {
+    display: flex;
+    width: 140px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.item {
+    width: 140px;
+    color: #000000;
+    text-align: center;
+}
+
+.sum {
+    width: 50px;
+}
+
+
+.active_client {
+    animation: blinker 1s linear infinite;
+    color: green;
+}
+
+
+.errors {
+    color: red;
+    font-size: 12px;
+    font-weight: 600;
+}
+.client-id,.id {
+    width: 50px;
+}
+
+input[type='submit'],
+button {
+    cursor: pointer;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: white;
+    font-size: 14px;
+}
+
+.active {
+    border: white 1px solid;
+    font-weight: 600;
+}
+
+.conf-step {
+    position: relative;
+    background-color: rgba(234, 233, 235, 0.95);
+}
+
+.conf-step::before {
+    content: '';
+    position: absolute;
+    left: 62px;
+    margin-left: -1px;
+    top: 0;
+    bottom: 0;
+    display: block;
+    width: 2px;
+    background-color: #BC95D6;
+}
+
+
+.conf-step__button {
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.24), 0px 0px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 3px;
+    border: none;
+    background-color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.4rem;
+    transition-property: background-color;
+    transition-duration: .5s;
+    transition-timing-function: ease;
+}
+
+.conf-step__button:hover,
+.conf-step__button:focus,
+.login__button:hover,
+.login__button:focus {
+    background-color: #7000c5;
+    outline: none;
+}
+
+.conf-step__button:active {
+    position: relative;
+    top: 2px;
+    background-color: #6c6453;
+    color: #FFFFFF;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+
+
+
+.conf-step__button-regular {
+    color: #63536C;
+    padding: 12px 32px;
+    margin-top: 17px;
+}
+
+.conf-step__button.conf-step__button-accent {
+    color: #FFFFFF;
+    font-weight: 600;
+    background-color: #C76F00;
+    padding: 12px 32px;
+    margin-top: 17px;
+}
+
+.conf-step__button.conf-step__button-accent:hover,
+.conf-step__button.conf-step__button-accent:focus {
+    background-color: #794e1c;
+    outline: none;
+}
+
+.conf-step__button.conf-step__button-accent:active,
+.login__button:active {
+    position: relative;
+    top: 2px;
+    background-color: #146C72;
+    color: #FFFFFF;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+
+
+
+.conf-step__label {
+    display: inline-block;
+    width: 180px;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: #848484;
+}
+
+
+.conf-step__input {
+    display: block;
+    width: 200px;
+    margin-top: 10px;
+    padding: 8px;
+    font-size: 1.2rem;
+    color: #000000;
+    border: 1px solid #b7b7b7;
+}
+
+.conf-step__input:focus {
+    outline: 1px #CF87FF solid;
+    outline-offset: -1px;
+}
+
+
+.required:before {
+    content: '*';
+    color: red;
+}
+
+
+
+/*# sourceMappingURL=styles.css.map */
